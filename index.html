@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102c28">
+<meta name="description" content="ポケモンチャンピオンズのシングル・ダブル構築記録。6体の技・持ち物・配分、選出方針、採用理由と実戦での確認事項。">
+<title>ポケモンチャンピオンズ | 構築・戦略ノート</title>
+<style>
+:root{color-scheme:light;--ink:#172e29;--muted:#5f6d64;--paper:#f5f5ed;--line:#d8ded1;--accent:#245e4b;--gold:#e5c875}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85}a{color:var(--accent);text-underline-offset:4px}button{font:inherit}button,a,[tabindex]{outline-offset:5px}:focus-visible{outline:3px solid #ab6419}header{background:#102c28;color:#fff;padding:58px 24px 44px;position:relative;overflow:hidden}header:after{content:"";width:320px;height:320px;border:1px solid #ffffff18;border-radius:50%;position:absolute;right:-80px;top:-140px;box-shadow:0 0 0 60px #ffffff04,0 0 0 120px #ffffff03;pointer-events:none}.header-inner,main,footer{max-width:1120px;margin:auto}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.2em;margin:0 0 8px}header .eyebrow{color:var(--gold)}h1{font-size:clamp(28px,4.5vw,48px);line-height:1.4;letter-spacing:.02em;margin:0 0 12px}header p{margin:0;color:#c7d7cd;max-width:680px}.record-date{display:inline-block;margin-top:24px;font-size:12px;border:1px solid #ffffff30;border-radius:5px;padding:5px 10px}.tabs-bar{position:sticky;top:0;z-index:3;background:#f5f5edf5;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tabs{max-width:1120px;margin:auto;display:flex;gap:8px;padding:12px 24px}.tabs button{cursor:pointer;border:0;border-radius:6px;padding:10px 24px;color:var(--muted);background:transparent;font-weight:700}.tabs button[aria-selected=true]{background:var(--accent);color:#fff}main{padding:32px 24px 48px}.notice{border-left:3px solid #c49a36;background:#ebeadd;padding:12px 18px;margin:0 0 36px;font-size:13px;color:#505d50}.section-heading{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:24px}.section-heading h2{font-size:28px;margin:0}.section-heading .eyebrow{color:var(--accent)}.badge{font-size:12px;background:#e4ebdf;padding:7px 12px;border-radius:20px;white-space:nowrap}.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:40px}.flow>div{border-top:3px solid var(--accent);background:#e9eee4;padding:16px 18px}.flow span{color:var(--accent);font-size:12px;font-weight:700}.flow p{margin:4px 0 0;font-size:15px;font-weight:650}.record-section{margin-bottom:36px}.record-section>h2{font-size:20px;padding-bottom:10px;border-bottom:1px solid var(--line);margin:0 0 20px}h3{font-size:17px;margin:24px 0 10px}p{margin:12px 0}li{margin-bottom:10px}ul,ol{padding-left:24px}.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.team-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:0 3px 12px #142f2304}.card-top{display:flex;align-items:center;gap:12px}.card-top h3{margin:0;font-size:18px}.number{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.item{color:var(--accent);font-size:13px;margin:8px 0 14px;font-weight:700}dl{margin:0;font-size:12px}dt{color:var(--muted);margin-top:8px}dd{margin:0;overflow-wrap:anywhere}.moves{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:18px}.moves span{background:#f0f3ed;border-radius:4px;padding:5px 8px;font-size:11px;line-height:1.6}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#fff}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th,td{text-align:left;padding:11px 14px;border-bottom:1px solid #e7eae2}th{background:#e8eee3;font-weight:650}tr:last-child td{border-bottom:0}footer{padding:0 24px 32px;color:var(--muted);font-size:12px}footer div{border-top:1px solid var(--line);padding-top:20px}footer a{margin-left:14px}[hidden]{display:none!important}
+@media(max-width:850px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{padding:36px 20px 30px}main{padding:24px 20px}.tabs{padding:10px 20px}.tabs button{flex:1;padding:10px 8px}.section-heading{display:block}.section-heading h2{font-size:24px}.badge{display:inline-block;margin-top:12px}.flow{grid-template-columns:1fr;gap:8px;margin-bottom:28px}.flow>div{padding:10px 16px}.team-grid{grid-template-columns:1fr}.team-card{padding:18px}.notice{margin-bottom:28px}body{font-size:14px}footer{padding:0 20px 24px}}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><p class="eyebrow">POKÉMON CHAMPIONS / STRATEGY NOTES</p><h1>構築から、勝ち筋へ。</h1><p>6体の役割、選出の出発点、採用の理由。<br>次の一戦で確かめたいことまでまとめた戦略ノート。</p><span class="record-date">構築記録 2026.09.13</span></div></header>
+<nav class="tabs-bar" aria-label="バトル形式"><div class="tabs" role="tablist" aria-label="戦略の切り替え"><button id="tab-doubles" role="tab" aria-controls="doubles" aria-selected="true" tabindex="0">ダブル</button><button id="tab-singles" role="tab" aria-controls="singles" aria-selected="false" tabindex="-1">シングル</button></div></nav>
+<main><p class="notice">2026年9月13日の相談で採用した構築の記録です。実戦での強さや現在の環境への適合は未検証。仕様・レギュレーション・参考情報は記録当時の内容です。</p><article id="doubles" class="strategy" role="tabpanel" aria-labelledby="tab-doubles" >
+<div class="section-heading"><div><p class="eyebrow">TEAM STRATEGY</p><h2>メガフラエッテ軸</h2></div><span class="badge">構成確定・実戦検証前</span></div>
+<div class="flow"><div><span>先発</span><p>エルフーン＋フラエッテ</p></div><div><span>展開</span><p>おいかぜからフラエッテで削る</p></div><div><span>後発</span><p>ガオガエン＋イダイトウで詰める</p></div></div>
+<section class="record-section"><h2>確定構成</h2>
+<div class="team-grid"><div class="team-card"><div class="card-top"><span class="number">01</span><h3>メガフラエッテ</h3></div>
+<p class="item">フラエッテナイト</p><dl><dt>特性</dt><dd>フラワーベール → フェアリーオーラ</dd><dt>性格・配分</dt><dd>おくびょう / H2・C32・S32</dd></dl>
+<div class="moves"><span>マジカルシャイン</span><span>ムーンフォース</span><span>サイコキネシス</span><span>まもる</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">02</span><h3>ガオガエン</h3></div>
+<p class="item">オボンのみ</p><dl><dt>特性</dt><dd>いかく</dd><dt>性格・配分</dt><dd>しんちょう / H32・B16・D18</dd></dl>
+<div class="moves"><span>フレアドライブ</span><span>DDラリアット</span><span>ねこだまし</span><span>すてゼリフ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">03</span><h3>ゴリランダー</h3></div>
+<p class="item">きせきのタネ</p><dl><dt>特性</dt><dd>グラスメイカー</dd><dt>性格・配分</dt><dd>いじっぱり / H32・A32・D2</dd></dl>
+<div class="moves"><span>ウッドハンマー</span><span>グラススライダー</span><span>ねこだまし</span><span>とんぼがえり</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">04</span><h3>エルフーン</h3></div>
+<p class="item">きあいのタスキ</p><dl><dt>特性</dt><dd>いたずらごころ</dd><dt>性格・配分</dt><dd>おくびょう / H2・C32・S32</dd></dl>
+<div class="moves"><span>ムーンフォース</span><span>おいかぜ</span><span>アンコール</span><span>がむしゃら</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">05</span><h3>イダイトウ♂</h3></div>
+<p class="item">こだわりスカーフ</p><dl><dt>特性</dt><dd>てきおうりょく</dd><dt>性格・配分</dt><dd>ようき / A32・B2・S32</dd></dl>
+<div class="moves"><span>ウェーブタックル</span><span>おはかまいり</span><span>アクアジェット</span><span>クイックターン</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">06</span><h3>ドドゲザン</h3></div>
+<p class="item">ヨプのみ</p><dl><dt>特性</dt><dd>まけんき</dd><dt>性格・配分</dt><dd>いじっぱり / H32・A32・D2</dd></dl>
+<div class="moves"><span>ドゲザン</span><span>アイアンヘッド</span><span>ふいうち</span><span>まもる</span></div></div></div>
+<p>フラエッテは「えいえんのはな」を使用。配分はチャンピオンズの能力ポイントで全員合計66。H＝HP、A＝攻撃、B＝防御、C＝特攻、D＝特防、S＝素早さ。</p>
+</section>
+<section class="record-section"><h2>レベル50の実数値</h2>
+<p>性格・能力ポイント反映後の計算値。フラエッテはメガ後。それ以外の持ち物・フィールド・能力変化による補正は表に含めない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>ポケモン</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>メガフラエッテ</td><td>151</td><td>94</td><td>107</td><td>207</td><td>168</td><td>169</td></tr>
+<tr><td>ガオガエン</td><td>202</td><td>135</td><td>126</td><td>90</td><td>140</td><td>80</td></tr>
+<tr><td>ゴリランダー</td><td>207</td><td>194</td><td>110</td><td>72</td><td>92</td><td>105</td></tr>
+<tr><td>エルフーン</td><td>137</td><td>78</td><td>105</td><td>129</td><td>95</td><td>184</td></tr>
+<tr><td>イダイトウ♂</td><td>195</td><td>164</td><td>87</td><td>90</td><td>95</td><td>143</td></tr>
+<tr><td>ドドゲザン</td><td>207</td><td>205</td><td>140</td><td>72</td><td>107</td><td>70</td></tr>
+</table></div>
+<ul>
+<li>フラエッテはおいかぜ中S338。</li>
+<li>イダイトウはスカーフ込みS214。最速メガルカリオZのS223には届かない。</li>
+<li>ドドゲザンはおいかぜ中もS140。耐久・ふいうち・まもるを活かす。</li>
+<li>配分は実戦開始用の基本案。特定の攻撃を耐える条件や確定数を検証した調整ではない。</li>
+</ul>
+</section>
+<section class="record-section"><h2>最終決定と変更履歴</h2>
+<h3>メガフラエッテ</h3>
+<ul>
+<li>当初のめいそう型から、めいそうをサイコキネシスへ変更。</li>
+<li>ムーンフォースとまもるは両方とも維持。</li>
+<li>積まずに攻撃する方針に合わせ、H32・C2・S32からH2・C32・S32へ変更。ユーザーが採用を明言済み。</li>
+<li>変更によりHP181→151、特攻177→207。現在はめいそうで勝つ構築として説明しない。</li>
+<li>サイコキネシスはオオニューラのエスパー4倍弱点を突く目的。フェアリー技は同相手に等倍。</li>
+<li>打点があっても安全に対面できるとは限らない。最速オオニューラはS189、かるわざ後はS378。後者はおいかぜ中のフラエッテより速い。相手のタスキにも注意。</li>
+</ul>
+<h3>エルフーン</h3>
+<ul>
+<li>フェアリーオーラを味方にも活かしたいというユーザー希望を受け、プテラから変更。</li>
+<li>ムーンフォースで追加の特殊打点を持ち、おいかぜでフラエッテを支える。</li>
+<li>がむしゃらの採用時、ユーザーがアンコールの維持を希望。最終的にまもるをがむしゃらへ変更。</li>
+<li>現在はまもるを持たない。ねこだまし・集中攻撃に注意して先発を選ぶ。</li>
+<li>がむしゃらは攻撃技なのでいたずらごころで先制しない。ゴーストには無効。タスキで耐えても相手のもう1体の攻撃で倒される可能性がある。</li>
+<li>エルフーンのがむしゃらからフラエッテのマジカルシャインで倒す連携が候補。通常の味方同士の行動順はS184→169。</li>
+</ul>
+<h3>ガオガエン</h3>
+<ul>
+<li>通常ウインディ・オオニューラへの変更も比較したが、最終構成はガオガエンを維持。</li>
+<li>いかく・ねこだまし・炎打点・すてゼリフを1体で担える点を評価。ゴリランダーを選出しない試合でもねこだましを確保できる。</li>
+<li>ウインディはフェアリー半減、おにび・バークアウトが利点。ねこだまし・すてゼリフを失うため、代役として成立しても同じ運用にはならない。</li>
+<li>オオニューラは高速の攻撃とねこだましが利点。いかくと炎打点を失う。ガオガエンとの比較は主にフラエッテのめいそう型を検討していた段階で実施し、その後の最終確認でもガオガエンを維持した。</li>
+</ul>
+</section>
+<section class="record-section"><h2>特性と連携の要点</h2>
+<ul>
+<li>フェアリーオーラはメガフラエッテが場にいる間、敵味方のフェアリー技を約1.33倍にする。味方のエルフーンにも有効。相手のフェアリー技も強化される。</li>
+<li>グラスフィールドは地面にいるポケモンをターン終了時に最大HPの1/16回復する。見た目で浮いていてもフラエッテは通常、地面にいる扱い。まもる中も回復し、相手も条件を満たせば回復する。</li>
+<li>グラスフィールドでエルフーンのHPが回復すると、がむしゃらで相手を削れる先も回復後のHPになる。</li>
+<li>ゴリランダーはサイコフィールドを上書きできる。ただし、リキキリンのテイルアーマーによる先制技封じはフィールド変更で解除できない。</li>
+<li>ねこだましはゴースト・まもる・先制技を防ぐ効果などで通らない場合がある。</li>
+<li>すてゼリフの交代先が安全に出られるかは行動順にも依存する。</li>
+<li>ドドゲザンのまけんきで相手のいかくを牽制する。ヨプのみでも格闘技を必ず耐えるとは限らない。</li>
+</ul>
+</section>
+<section class="record-section"><h2>基本選出と勝ち筋</h2>
+<p>基本選出は先発エルフーン＋フラエッテ、後発ガオガエン＋イダイトウ。おいかぜからフラエッテで削り、イダイトウで詰める。</p>
+<ul>
+<li>相手の水が強ければゴリランダーを検討。</li>
+<li>相手のフェアリーやいかくが気になる場合はドドゲザンを検討。</li>
+<li>先発にねこだましの妨害が予想される場合はガオガエン＋フラエッテなども検討。</li>
+<li>フェアリー技が通りにくい鋼・毒に対して2体を並べ続けず、ガオガエンなどにつなぐ。</li>
+</ul>
+</section>
+<section class="record-section"><h2>実戦での確認項目</h2>
+<p>確定は実戦に投入する構成の合意。勝率・到達ランク・上位帯での安定性は未検証。</p>
+<ol>
+<li>トリックルーム相手への選出とターンのしのぎ方。先制技もサイコフィールドやテイルアーマーに止められる場合がある。</li>
+<li>まもるを外したエルフーンがおいかぜ・アンコール・がむしゃらを使う機会を確保できるか。</li>
+<li>CS配分のフラエッテが十分に攻撃できるか。HPを削った影響とサイコキネシスの有用性。</li>
+<li>ねこだまし・すてゼリフが勝ちに貢献しているか。ウインディのフェアリー耐性やおにびを必要とする試合が多いか。</li>
+<li>プテラを外して失ったワイドガード・岩・飛行打点の影響。</li>
+<li>相手のいかく、鋼・毒、範囲攻撃への対応。まけんきの存在だけで物理アタッカー全員を保護できるわけではない。</li>
+</ol>
+<p>次回は相手の6体、自分の選出4体、勝敗、苦戦した行動やターンを確認して調整する。</p>
+</section>
+<section class="record-section"><h2>相談時の参照資料</h2>
+<p>2026年9月13日の相談で確認した資料。攻略記事は更新される可能性がある。構築と基本配分は資料を参考に提案し、会話で採用されたもの。</p>
+<ul>
+<li><a href="https://news.pokemon-home.com/ja/page/816.html" target="_blank" rel="noopener noreferrer">公式レギュレーションM-C</a></li>
+<li><a href="https://liberty-note.com/2026/07/31/floette-mb-double/" target="_blank" rel="noopener noreferrer">フラエッテのダブル解説（M-B）</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554659" target="_blank" rel="noopener noreferrer">メガフラエッテの習得技・能力</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/555188" target="_blank" rel="noopener noreferrer">ガオガエンの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/574497" target="_blank" rel="noopener noreferrer">ゴリランダーの習得技・能力</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/553389" target="_blank" rel="noopener noreferrer">エルフーンの習得技・能力</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/555194" target="_blank" rel="noopener noreferrer">イダイトウ♂の育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554958" target="_blank" rel="noopener noreferrer">ドドゲザンの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554239" target="_blank" rel="noopener noreferrer">がむしゃらの仕様</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/561710" target="_blank" rel="noopener noreferrer">フィールドの仕様</a></li>
+</ul>
+</section>
+</article><article id="singles" class="strategy" role="tabpanel" aria-labelledby="tab-singles" hidden>
+<div class="section-heading"><div><p class="eyebrow">TEAM STRATEGY</p><h2>メガギャラドス軸</h2></div><span class="badge">構成確定・実戦課題あり</span></div>
+<div class="flow"><div><span>削り</span><p>ガブリアスのステロ・さめはだ・ゴツメ</p></div><div><span>展開</span><p>ギャラドスのりゅうのまい</p></div><div><span>別の勝ち筋</span><p>サーフゴーのわるだくみで崩す</p></div></div>
+<section class="record-section"><h2>確定構成</h2>
+<div class="team-grid"><div class="team-card"><div class="card-top"><span class="number">01</span><h3>サーフゴー</h3></div>
+<p class="item">ふうせん</p><dl><dt>特性</dt><dd>おうごんのからだ</dd><dt>性格・配分</dt><dd>おくびょう / H2・C32・S32</dd></dl>
+<div class="moves"><span>ゴールドラッシュ</span><span>シャドーボール</span><span>わるだくみ</span><span>じこさいせい</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">02</span><h3>ギャラドス</h3></div>
+<p class="item">ギャラドスナイト</p><dl><dt>特性</dt><dd>いかく → かたやぶり</dd><dt>性格・配分</dt><dd>ようき / A32・S32・D2</dd></dl>
+<div class="moves"><span>たきのぼり</span><span>じしん</span><span>りゅうのまい</span><span>ちょうはつ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">03</span><h3>アシレーヌ</h3></div>
+<p class="item">オボンのみ</p><dl><dt>特性</dt><dd>げきりゅう</dd><dt>性格・配分</dt><dd>ひかえめ / H32・C32・B2</dd></dl>
+<div class="moves"><span>なみのり</span><span>ムーンフォース</span><span>れいとうビーム</span><span>アンコール</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">04</span><h3>ヒートロトム</h3></div>
+<p class="item">こだわりスカーフ</p><dl><dt>特性</dt><dd>ふゆう</dd><dt>性格・配分</dt><dd>おくびょう / C32・S32・D2</dd></dl>
+<div class="moves"><span>オーバーヒート</span><span>10まんボルト</span><span>ボルトチェンジ</span><span>トリック</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">05</span><h3>ガブリアス</h3></div>
+<p class="item">ゴツゴツメット</p><dl><dt>特性</dt><dd>さめはだ</dd><dt>性格・配分</dt><dd>わんぱく / H32・B32・D2</dd></dl>
+<div class="moves"><span>じしん</span><span>ステルスロック</span><span>ドラゴンテール</span><span>がんせきふうじ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">06</span><h3>マスカーニャ</h3></div>
+<p class="item">たつじんのおび</p><dl><dt>特性</dt><dd>しんりょく</dd><dt>性格・配分</dt><dd>ようき / A32・S32・D2</dd></dl>
+<div class="moves"><span>トリックフラワー</span><span>トリプルアクセル</span><span>ふいうち</span><span>かわらわり</span></div></div></div>
+<p>配分はチャンピオンズの能力ポイントで各個体合計66。従来作品の努力値表記とは異なる。H＝HP、A＝攻撃、B＝防御、C＝特攻、D＝特防、S＝素早さ。</p>
+</section>
+<section class="record-section"><h2>決定事項と採用理由</h2>
+<ul>
+<li>メガルカリオZの枠をサーフゴーへ変更。メガギャラドスと同時選出しても両方の性能を活かせることを重視。メガ枠はギャラドス1体とし、毎試合の選出・メガシンカは必須としない。</li>
+<li>ストリンダーへの変更は見送り、ヒートロトムを継続。</li>
+<li>サーフゴーのふうせんは地面技を一時的に無効化し、わるだくみ・じこさいせいの機会を作る目的。攻撃で割れた後も地面を無効化できるわけではない。CS配分なので万能な受け役にはしない。</li>
+<li>アシレーヌはオボンのみ、ガブリアスはゴツゴツメットを採用。</li>
+<li>ギャラドスはかみくだくをちょうはつへ変更済み。あくび・回復・積み技・吹き飛ばしなどへの対策を重視。じしんはメガ後のかたやぶりでロトムのふゆうを無視できる点も評価。</li>
+<li>ガブリアスはどくづきを見送り、がんせきふうじを継続。HB配分の役割に合う素早さ操作を重視。地面等倍のフェアリーには一致じしんと抜群どくづきの威力差が小さい。</li>
+<li>マスカーニャはユーザー希望でたつじんのおび。特性はしんりょく。きあいのタスキやへんげんじざいへ変更していない。</li>
+<li>マスカーニャのはたきおとす枠はとんぼがえり・けたぐり等も比較したうえでかわらわりに確定。格闘打点と壁の破壊を兼任。</li>
+<li>けたぐりはドドゲザンに威力100、ブリジュラスに80。かわらわりは固定75で、リフレクター・ひかりのかべ・オーロラベールを破壊。ブリジュラスへの威力差は小さいが、ドドゲザンへの火力はけたぐりが高い。</li>
+<li>ギャラドスのかみくだくとマスカーニャのはたきおとすは両方とも不採用。悪技はふいうちだけなので、変化技を使う相手への安定した悪打点はない。ゴースト打点はサーフゴーのシャドーボールで確保。</li>
+</ul>
+</section>
+<section class="record-section"><h2>構築査定</h2>
+<p>相談時の机上評価ではマスターボール級で十分戦える構成。現時点で必須の変更はなく、固定して選出と立ち回りを検証する方針。実戦勝率や上位帯での安定性は未検証で、到達や勝率を保証する評価ではない。</p>
+<h3>強みと勝ち筋</h3>
+<ul>
+<li>ガブリアスのステロ・さめはだ・ゴツメで削り、ギャラドスのりゅうのまいから全抜きを狙える。</li>
+<li>サーフゴーのわるだくみ・じこさいせいで耐久寄りの相手を崩す別の勝ち筋がある。</li>
+<li>ロトムのスカーフとマスカーニャの素早さ・ふいうちで終盤を詰められる。</li>
+<li>物理と特殊の攻め手がそろい、ちょうはつ・アンコール・トリック・ドラゴンテール・かわらわりで相手の展開にも干渉できる。</li>
+</ul>
+<h3>注意点</h3>
+<ol>
+<li><strong>積んだ高速エースへの切り返し</strong>：最速メガボーマンダはりゅうのまい1回でS283となり、スカーフロトムのS226でも抜けない。タスキ持ちもいないため、氷技があるだけで安全とはいえない。自由に積ませず、ガブリアスのがんせきふうじ・ドラゴンテールやアシレーヌの氷打点を使う。ドラゴンテールも相手の攻撃を耐えられるか判断が必要。</li>
+<li><strong>ロトムへの役割集中</strong>：鋼・草への対応、交代技、高速相手の処理を兼任。メガグソクムシャ・メガハッサム等がいる試合では特にHPを残す。高速相手が残っている状況でのスカーフトリックは慎重に判断。</li>
+<li><strong>ステルスロックによる消耗</strong>：ロトムとメガ前のギャラドスは登場時に最大HPの約1/4を失う。除去技がなく、回復技持ちもサーフゴーだけなので長い交代戦は苦手。</li>
+<li><strong>ギャラドスの攻撃範囲</strong>：水・地面の2技ではボーマンダや草タイプなどに通しにくい。ちょうはつで回復を止めても必ず突破できるわけではない。選出段階でサーフゴーやアシレーヌを勝ち筋にする判断も必要。</li>
+<li><strong>マスカーニャの行動機会</strong>：帯は抜群火力を補うが、タスキのように一撃を耐える保証はない。ふいうちは相手の変化技や交代には通らず、アクセルにも命中の不安がある。</li>
+</ol>
+</section>
+<section class="record-section"><h2>ギャラドスの運用</h2>
+<ul>
+<li>序盤のいかくと終盤のりゅうのまいを使い分ける。AS配分・回復なしなので繰り返し受け続ける役にはしない。</li>
+<li>メガ前は地面無効・格闘半減。メガ後はエスパー無効・ゴースト半減になる一方、草・格闘・虫・フェアリーが弱点になる。電気は4倍から2倍へ変わる。</li>
+<li>交代で出す瞬間にはメガシンカできないため、メガ前の状態でエスパー技へ無効受けはできない。</li>
+<li>かたやぶりのじしんはふゆうを無視するが、ひこうタイプの地面無効は無視しない。</li>
+<li>ちょうはつは既に受けたあくびを解除しない。また、ボディプレスやイカサマなどの攻撃技は止められない。</li>
+<li>最速ギャラドスはS146、りゅうのまい1回でS219。最速メガルカリオZのS223には届かない。</li>
+</ul>
+</section>
+<section class="record-section"><h2>選出の出発点</h2>
+<p>固定の正解ではなく、相手の6体と勝ち筋に合わせて調整する。記載順は必ずしも先発順を意味しない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>相手・狙い</th><th>選出例</th><th>動き</th></tr>
+<tr><td>ギャラドスが通りそう</td><td>ガブリアス＋ギャラドス＋ロトム</td><td>削りと鋼・草の処理からりゅうまい</td></tr>
+<tr><td>耐久・変化技が多い</td><td>サーフゴー＋ギャラドス＋ロトム</td><td>わるだくみ・ちょうはつ・トリックで崩す</td></tr>
+<tr><td>攻撃的で積む余裕が少ない</td><td>ロトム＋アシレーヌ＋マスカーニャ</td><td>対面ごとに削り、高速技・先制技で詰める</td></tr>
+</table></div>
+</section>
+<section class="record-section"><h2>実戦での確認項目</h2>
+<p>まず20〜30戦ほど固定して試すことを提案済み。これは見直しのための目安で、勝率を統計的に確定する試合数ではない。</p>
+<ul>
+<li>相手の主要ポケモンと自分の選出3体。</li>
+<li>勝敗と、勝負が決まったターンの行動。</li>
+<li>積まれて止まらなかったか。</li>
+<li>ロトムが先に消耗したか、スカーフを手放すのが早かったか。</li>
+<li>ギャラドスの攻撃範囲が足りなかったか。</li>
+<li>かわらわりの壁破壊が役立ったか、格闘打点として火力不足だったか。</li>
+<li>技を変更すべき問題か、選出やHPの温存で改善できる問題か。</li>
+</ul>
+<p>2026年9月13日のユーザー報告：サーフゴーはそもそも選出しないことが多い。マスカーニャ・アシレーヌ・ギャラドスの3体を選出することが多く、ガブリアスとヒートロトムもたまに選出する。</p>
+<p>追加のユーザー報告：アーマーガアが少しきつい。相手の技構成・試合数・勝敗は未確認。現時点では構成変更なし。</p>
+<p>次の検討案：アーマーガア入りにサーフゴーまたはヒートロトムを選出して対応する。ボディプレス主体のアーマーガアに対するサーフゴーの役割を実戦で確認してから、6枠目の変更を判断する。選出案は未検証。</p>
+</section>
+<section class="record-section"><h2>相談時の参照資料</h2>
+<p>環境情報は2026年9月13日の相談時点。以下の攻略情報は第三者資料で、更新により内容が変わり得る。構築査定と選出案はそれらを参考にしたアシスタントの判断。</p>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/546413" target="_blank" rel="noopener noreferrer">環境ランキング</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/564100" target="_blank" rel="noopener noreferrer">サーフゴーの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554989" target="_blank" rel="noopener noreferrer">メガギャラドスの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554982" target="_blank" rel="noopener noreferrer">ヒートロトムの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554969" target="_blank" rel="noopener noreferrer">マスカーニャの育成論・習得技</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554250" target="_blank" rel="noopener noreferrer">かわらわりの仕様</a></li>
+<li><a href="https://appmedia.jp/pokemonchampions/79878392" target="_blank" rel="noopener noreferrer">ブリジュラスの重量とけたぐり威力</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/575012" target="_blank" rel="noopener noreferrer">メガボーマンダの能力と育成論</a></li>
+<li><a href="https://jara-blog.com/stealth-rock-sv" target="_blank" rel="noopener noreferrer">ステルスロックの仕様</a></li>
+</ul>
+</section>
+</article></main>
+<footer><div>個人の構築・戦略ノート / 非公式<a href="https://github.com/otake-shol/pokemon-strategy">公開ページのリポジトリ</a></div></footer>
+<script>
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+function select(mode, focus = false) {
+  if (!['doubles', 'singles'].includes(mode)) mode = 'doubles';
+  tabs.forEach(tab => {
+    const active = tab.id === `tab-${mode}`;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+    document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+    if (active && focus) tab.focus();
+  });
+}
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => { location.hash = tab.getAttribute('aria-controls'); });
+  tab.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const target = event.key === 'Home' ? 'doubles' : event.key === 'End' ? 'singles' : tab.id === 'tab-doubles' ? 'singles' : 'doubles';
+    select(target, true);
+    history.replaceState(null, '', `#${target}`);
+  });
+});
+document.querySelectorAll('[data-switch]').forEach(link => link.addEventListener('click', () => select(link.dataset.switch)));
+window.addEventListener('hashchange', () => select(location.hash.slice(1)));
+select(location.hash.slice(1));
+</script>
+</body>
+</html>
