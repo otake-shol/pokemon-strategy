@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102c28">
+<meta name="description" content="ポケモンチャンピオンズのシングル・ダブル構築記録。6体の技・持ち物・配分、選出方針、採用理由と実戦での確認事項。">
+<title>ポケモンチャンピオンズ | 構築・戦略ノート</title>
+<style>
+:root{color-scheme:light;--ink:#172e29;--muted:#5f6d64;--paper:#f5f5ed;--line:#d8ded1;--accent:#245e4b;--gold:#e5c875}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85}a{color:var(--accent);text-underline-offset:4px}button{font:inherit}button,a,[tabindex]{outline-offset:5px}:focus-visible{outline:3px solid #ab6419}header{background:#102c28;color:#fff;padding:58px 24px 44px;position:relative;overflow:hidden}header:after{content:"";width:320px;height:320px;border:1px solid #ffffff18;border-radius:50%;position:absolute;right:-80px;top:-140px;box-shadow:0 0 0 60px #ffffff04,0 0 0 120px #ffffff03;pointer-events:none}.header-inner,main,footer{max-width:1120px;margin:auto}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.2em;margin:0 0 8px}header .eyebrow{color:var(--gold)}h1{font-size:clamp(28px,4.5vw,48px);line-height:1.4;letter-spacing:.02em;margin:0 0 12px}header p{margin:0;color:#c7d7cd;max-width:680px}.record-date{display:inline-block;margin-top:24px;font-size:12px;border:1px solid #ffffff30;border-radius:5px;padding:5px 10px}.tabs-bar{position:sticky;top:0;z-index:3;background:#f5f5edf5;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tabs{max-width:1120px;margin:auto;display:flex;gap:8px;padding:12px 24px}.tabs button{cursor:pointer;border:0;border-radius:6px;padding:10px 24px;color:var(--muted);background:transparent;font-weight:700}.tabs button[aria-selected=true]{background:var(--accent);color:#fff}main{padding:32px 24px 48px}.notice{border-left:3px solid #c49a36;background:#ebeadd;padding:12px 18px;margin:0 0 36px;font-size:13px;color:#505d50}.section-heading{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:24px}.section-heading h2{font-size:28px;margin:0}.section-heading .eyebrow{color:var(--accent)}.badge{font-size:12px;background:#e4ebdf;padding:7px 12px;border-radius:20px;white-space:nowrap}.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:40px}.flow>div{border-top:3px solid var(--accent);background:#e9eee4;padding:16px 18px}.flow span{color:var(--accent);font-size:12px;font-weight:700}.flow p{margin:4px 0 0;font-size:15px;font-weight:650}.record-section{margin-bottom:36px}.record-section>h2{font-size:20px;padding-bottom:10px;border-bottom:1px solid var(--line);margin:0 0 20px}h3{font-size:17px;margin:24px 0 10px}p{margin:12px 0}li{margin-bottom:10px}ul,ol{padding-left:24px}.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.team-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:0 3px 12px #142f2304}.card-top{display:flex;align-items:center;gap:12px}.card-top h3{margin:0;font-size:18px}.number{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.item{color:var(--accent);font-size:13px;margin:8px 0 14px;font-weight:700}dl{margin:0;font-size:12px}dt{color:var(--muted);margin-top:8px}dd{margin:0;overflow-wrap:anywhere}.moves{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:18px}.moves span{background:#f0f3ed;border-radius:4px;padding:5px 8px;font-size:11px;line-height:1.6}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#fff}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th,td{text-align:left;padding:11px 14px;border-bottom:1px solid #e7eae2}th{background:#e8eee3;font-weight:650}tr:last-child td{border-bottom:0}footer{padding:0 24px 32px;color:var(--muted);font-size:12px}footer div{border-top:1px solid var(--line);padding-top:20px}footer a{margin-left:14px}[hidden]{display:none!important}
+@media(max-width:850px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{padding:36px 20px 30px}main{padding:24px 20px}.tabs{padding:10px 20px}.tabs button{flex:1;padding:10px 8px}.section-heading{display:block}.section-heading h2{font-size:24px}.badge{display:inline-block;margin-top:12px}.flow{grid-template-columns:1fr;gap:8px;margin-bottom:28px}.flow>div{padding:10px 16px}.team-grid{grid-template-columns:1fr}.team-card{padding:18px}.notice{margin-bottom:28px}body{font-size:14px}footer{padding:0 20px 24px}}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><p class="eyebrow">POKÉMON CHAMPIONS / STRATEGY NOTES</p><h1>構築から、勝ち筋へ。</h1><p>6体の役割、選出の出発点、採用の理由。<br>次の一戦で確かめたいことまでまとめた戦略ノート。</p><span class="record-date">ダブル 2026.09.25 / シングル 2026.09.13</span></div></header>
+<nav class="tabs-bar" aria-label="バトル形式"><div class="tabs" role="tablist" aria-label="戦略の切り替え"><button id="tab-doubles" role="tab" aria-controls="doubles" aria-selected="true" tabindex="0">ダブル</button><button id="tab-singles" role="tab" aria-controls="singles" aria-selected="false" tabindex="-1">シングル</button></div></nav>
+<main><p class="notice">ダブルは2026年9月25日の採用・保存指示に対応する作戦ノート、シングルは9月13日の相談記録です。メガシンカは1試合1匹。カイリューの性格・配分は当時の推奨設定です。仕様・参考情報は記録当時の内容で、現在の環境への適合と新構成の勝率は未検証です。</p><article id="doubles" class="strategy" role="tabpanel" aria-labelledby="tab-doubles" >
+<div class="section-heading"><div><p class="eyebrow">TEAM STRATEGY</p><h2>フラエッテ・カイリューのメガ2択</h2></div><span class="badge">9/25版・新構成の勝率は未検証</span></div>
+<section class="record-section"><h2>6匹の設定</h2>
+<div class="team-grid"><div class="team-card"><div class="card-top"><span class="number">01</span><h3>メガフラエッテ</h3></div>
+<p class="item">フラエッテナイト</p><dl><dt>特性</dt><dd>フラワーベール → フェアリーオーラ</dd><dt>性格・配分</dt><dd>ずぶとい / H20・B14・S32</dd></dl>
+<div class="moves"><span>マジカルシャイン</span><span>ムーンフォース</span><span>サイコキネシス</span><span>まもる</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">02</span><h3>イダイトウ♂</h3></div>
+<p class="item">いのちのたま</p><dl><dt>特性</dt><dd>てきおうりょく</dd><dt>性格・配分</dt><dd>いじっぱり / H2・A32・S32</dd></dl>
+<div class="moves"><span>ウェーブタックル</span><span>おはかまいり</span><span>アクアジェット</span><span>まもる</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">03</span><h3>ガオガエン</h3></div>
+<p class="item">ゴツゴツメット</p><dl><dt>特性</dt><dd>いかく</dd><dt>性格・配分</dt><dd>わんぱく / H32・B23・D11</dd></dl>
+<div class="moves"><span>フレアドライブ</span><span>DDラリアット</span><span>ねこだまし</span><span>すてゼリフ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">04</span><h3>ゴリランダー</h3></div>
+<p class="item">きせきのタネ</p><dl><dt>特性</dt><dd>グラスメイカー</dd><dt>性格・配分</dt><dd>いじっぱり / H26・A32・S8</dd></dl>
+<div class="moves"><span>ウッドハンマー</span><span>グラススライダー</span><span>ねこだまし</span><span>10まんばりき</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">05</span><h3>メガカイリュー</h3></div>
+<p class="item">カイリュナイト</p><dl><dt>特性</dt><dd>マルチスケイル（メガ前：せいしんりょく）</dd><dt>性格・配分</dt><dd>おくびょう / H2・C32・S32</dd></dl>
+<div class="moves"><span>ねっぷう</span><span>りゅうのはどう</span><span>おいかぜ</span><span>まもる</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">06</span><h3>オオニューラ</h3></div>
+<p class="item">グラスシード</p><dl><dt>特性</dt><dd>かるわざ</dd><dt>性格・配分</dt><dd>いじっぱり / H2・A32・S32</dd></dl>
+<div class="moves"><span>フェイタルクロー</span><span>インファイト</span><span>がんせきふうじ</span><span>まもる</span></div></div></div>
+<details><summary>実数値・役割・注意点の詳細</summary><h3>メガフラエッテ</h3>
+<p>性格：ずぶとい（防御↑・攻撃↓）／特性：フラワーベール → フェアリーオーラ／持ち物：フラエッテナイト</p>
+<p>技：マジカルシャイン／ムーンフォース／サイコキネシス／まもる</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>169</td><td>94</td><td>133</td><td>175</td><td>168</td><td>154</td></tr>
+<tr><td>SP</td><td>20</td><td>0</td><td>14</td><td>0</td><td>0</td><td>32</td></tr>
+</table></div>
+<p>ずぶといH20 B14 S32を維持。メガ後S154。基本①・③には追い風役がいないため、相手の素早さを確認して攻撃する。</p>
+<p>まもるで隣の交代を待てる。フェアリーオーラは相手のフェアリー技も強化。メガ前のフラワーベールはメガ後に失われる。</p>
+<h3>イダイトウ♂</h3>
+<p>性格：いじっぱり（攻撃↑・特攻↓）／特性：てきおうりょく／持ち物：いのちのたま</p>
+<p>技：ウェーブタックル／おはかまいり／アクアジェット／まもる</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>197</td><td>180</td><td>85</td><td>90</td><td>95</td><td>130</td></tr>
+<tr><td>SP</td><td>2</td><td>32</td><td>0</td><td>0</td><td>0</td><td>32</td></tr>
+</table></div>
+<p>いじっぱりA32 S32を維持。追い風中S260。てきおうりょく型なので雨だけでは速くならない。</p>
+<p>ノーマルにはおはかまいり無効。珠とウェーブタックルの反動を考慮。晴れ・威嚇で水打点が下がる。</p>
+<h3>ガオガエン</h3>
+<p>性格：わんぱく（防御↑・特攻↓）／特性：いかく／持ち物：ゴツゴツメット</p>
+<p>技：フレアドライブ／DDラリアット／ねこだまし／すてゼリフ</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>202</td><td>135</td><td>146</td><td>90</td><td>121</td><td>80</td></tr>
+<tr><td>SP</td><td>32</td><td>0</td><td>23</td><td>0</td><td>11</td><td>0</td></tr>
+</table></div>
+<p>わんぱくH32 B23 D11の物理耐久型。ゴツゴツメットを維持し、接触技の相手を削る。</p>
+<p>まもる不採用。ゴツメは受けるダメージを減らさず、回復もしない。特殊攻撃には威嚇が効かない。炎技は半減できるが、晴れ高火力を何度も受けられる保証はない。</p>
+<h3>ゴリランダー</h3>
+<p>性格：いじっぱり（攻撃↑・特攻↓）／特性：グラスメイカー／持ち物：きせきのタネ</p>
+<p>技：ウッドハンマー／グラススライダー／ねこだまし／10まんばりき</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>201</td><td>194</td><td>110</td><td>72</td><td>90</td><td>113</td></tr>
+<tr><td>SP</td><td>26</td><td>32</td><td>0</td><td>0</td><td>0</td><td>8</td></tr>
+</table></div>
+<p>オオニューラのグラスシード起動も担当。いじっぱりH26 A32 S8・きせきのタネ、以前の4技を維持。S113、追い風中S226。</p>
+<p>まもる不採用。10まんばりきはグラスフィールドで半減されず、きせきのタネでも強化されない。ふうせんには無効。メガグソクムシャには等倍。</p>
+<h3>メガカイリュー</h3>
+<p>性格：おくびょう（素早さ↑・攻撃↓）／特性：マルチスケイル（メガ前：せいしんりょく）／持ち物：カイリュナイト</p>
+<p>技：ねっぷう／りゅうのはどう／おいかぜ／まもる</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>168</td><td>129</td><td>135</td><td>197</td><td>145</td><td>167</td></tr>
+<tr><td>SP</td><td>2</td><td>0</td><td>0</td><td>32</td><td>0</td><td>32</td></tr>
+</table></div>
+<p>推奨：おくびょうH2 C32 S32。メガ後C197・S167、追い風S334。ひかえめC216・S152より追い風前の行動順を優先。ねっぷう／りゅうのはどう／おいかぜ／まもる。</p>
+<p>氷4倍、岩・ドラゴン・フェアリー2倍。メガ前せいしんりょくは怯みを防ぐがメガ後は失う。マルチスケイルは満タン時のみ。非接地なので通常はグラスフィールドで回復しない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>メガ前</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>168</td><td>138</td><td>115</td><td>152</td><td>120</td><td>145</td></tr>
+</table></div>
+<h3>オオニューラ</h3>
+<p>性格：いじっぱり（攻撃↑・特攻↓）／特性：かるわざ／持ち物：グラスシード</p>
+<p>技：フェイタルクロー／インファイト／がんせきふうじ／まもる</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>HP</th><th>攻撃</th><th>防御</th><th>特攻</th><th>特防</th><th>素早さ</th></tr>
+<tr><td>実数値</td><td>157</td><td>200</td><td>80</td><td>54</td><td>100</td><td>172</td></tr>
+<tr><td>SP</td><td>2</td><td>32</td><td>0</td><td>0</td><td>0</td><td>32</td></tr>
+</table></div>
+<p>いじっぱりH2 A32 S32・グラスシードを採用。フェイタルクロー／インファイト／がんせきふうじ／まもる。通常S172、かるわざ発動後S344。じごくづきは不採用。</p>
+<p>種消費で防御＋1とかるわざを起動。交代で両方を失い、消費済みの種では再起動できない。先制技には無防備。エスパー4倍、地面・飛行2倍。サーフゴーには毒・格闘が無効。</p></details>
+</section>
+<div class="flow"><div><span>基本候補</span><p>フラエッテ＋通常カイリュー／裏ガオガエン＋イダイトウ</p></div><div><span>鋼が重い相手</span><p>カイリュー＋ガオガエン／裏イダイトウ＋ゴリランダー</p></div><div><span>初手から高速で攻める</span><p>ゴリランダー＋オオニューラ／裏フラエッテ＋ガオガエン</p></div></div>
+<section class="record-section"><h2>構成の方針</h2>
+<p>カイリュー採用・ねっぷう／りゅうのはどう／おいかぜ／まもる・基本4選出</p>
+<p>エルフーンをカイリューへ変更。フラエッテの攻撃、カイリューの特殊炎と追い風、ゴリランダー＋オオニューラの速攻から選ぶ。メガは1試合1匹。先制追い風・アンコール・がむしゃらを前提にした旧手順を終了。</p>
+</section>
+<section class="record-section"><h2>最近の対戦と修正点</h2>
+<p>変更：エルフーン→カイリュー。4技はねっぷう／りゅうのはどう／おいかぜ／まもる。推奨育成はおくびょう・H2 C32 S32・カイリュナイト・メガ前せいしんりょく。6匹の育成設定は維持。フラエッテ＋通常カイリューを基本④に追加し、全21パターンへ更新。</p>
+<p>基本①・③・④のメガはフラエッテ、基本②はカイリュー。基本④ではカイリューを通常のまま使う。カイリューを選ばない4匹には追い風がない。通常優先度の追い風を先制で使える前提にしない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>対面</th><th>確認済みの事実と対応方針</th></tr>
+<tr><td>エルフーンからメガカイリューへ</td><td>特殊ねっぷうと通常優先度の追い風。先制設置・アンコール・がむしゃらは終了。</td></tr>
+<tr><td>フラエッテ側の基本選出</td><td>ガオガエンと先発し、後発イダイトウ＋ゴリランダー。追い風なしで動ける相手を選ぶ。</td></tr>
+<tr><td>高速相手への速攻選出</td><td>ゴリランダー＋オオニューラ。後発メガを相手に合わせて選ぶ。</td></tr>
+<tr><td>アーマーガアの防御上昇</td><td>特殊ねっぷうを追加。回復・ワイドガード・相手の隣は別途確認。</td></tr>
+<tr><td>ドヒドイデへの対策後退</td><td>アンコール・がむしゃらがなくなり、地面＋サイコキネシスの集中が中心。</td></tr>
+<tr><td>ライチュウ＋サーフゴー</td><td>電気枠を速攻で攻め、サーフゴーを後発の特殊炎で削る案。</td></tr>
+</table></div>
+</section>
+<section class="record-section"><h2>基本4選出</h2>
+<p>まず相手6匹からメガ枠を選び、次に先発を決める。フラエッテが通るなら基本①、鋼が重いなら基本②、設置前から速さが必要なら基本③。フラエッテを通常カイリューの追い風で支えるなら基本④。</p>
+<h3>基本①：フラエッテ＋ガオガエン</h3>
+<p>先発：メガフラエッテ＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>フェアリーが通り、初手から高速2匹に押し切られにくい相手。フラエッテを主軸にする基本形。</p>
+<p>初手：有効なねこだまし＋フラエッテの攻撃。集中が濃ければフラエッテをまもる。ねこだまし無効なら炎・悪技、すてゼリフ、通常交代から選ぶ。</p>
+<p>注意：この4匹に追い風はない。フラエッテはS154のまま。旧エルフーン先発の感覚で上から動けると考えない。</p>
+<h3>基本②：カイリュー＋ガオガエン</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>サーフゴー・メガグソクムシャ・アーマーガアが重く、特殊炎を軸に攻めたい相手。</p>
+<p>初手：攻撃できるならねっぷう＋ねこだまし・悪技等。次のターン以降に速度逆転が必要で、追い風を使う余裕がある時だけねこだまし＋おいかぜ。</p>
+<p>注意：メガするとせいしんりょくを失い、ねこだましで怯む。マルチスケイルは満タン時のみ。ねっぷうは命中90・範囲補正・雨半減・ワイドガードを考慮。</p>
+<h3>基本③：ゴリランダー＋オオニューラ</h3>
+<p>先発：ゴリランダー＋オオニューラ</p>
+<p>後発：メガフラエッテ＋ガオガエン</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>ライチュウなどへ追い風設置前から先手で圧力をかけたい相手。毒・格闘が通ることが条件。</p>
+<p>初手：グラスシード消費を確認し、有効なねこだまし＋オオニューラの攻撃。相手のねこだまし・集中が濃ければまもる＋ゴリランダーの攻撃。</p>
+<p>注意：この4匹に追い風はない。相手の最速かるわざS378には抜かれる。先制技・麻痺・威嚇・トリルで崩れる。サーフゴーへ毒・格闘は無効。</p>
+<h3>基本④：フラエッテ＋通常カイリュー</h3>
+<p>先発：メガフラエッテ＋通常カイリュー</p>
+<p>後発：ガオガエン＋イダイトウ♂</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>フラエッテを主力にしながら追い風と補助のねっぷうを使いたい相手。通常カイリューのせいしんりょくで本人の怯みを防ぐ。</p>
+<p>初手：フラエッテへの集中が濃ければ、メガフラエッテのまもる＋通常カイリューのおいかぜ。フラエッテが安全に攻撃できるなら攻撃＋追い風も比較。カイリューはメガシンカさせない。</p>
+<p>注意：初手はフラエッテS154が通常カイリューS145より速く、追い風がフラエッテの攻撃前に入る保証はない。せいしんりょくは隣を守らない。カイリューはC152・防御115・特防120で、マルチスケイルも持ち物の耐久補助もない。集中攻撃・麻痺・氷技を確認する。</p>
+</section>
+<section class="record-section"><h2>選出前の確認</h2>
+<p>基本4選出を比較し、相手6匹から最も危険な負け筋を確認する。先発を予想しても決め打ちせず、別先発にも初手から攻撃できるかを確認する。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>相手の主な脅威</th><th>選出の出発点</th></tr>
+<tr><td>フラエッテを追い風で支援</td><td>フラエッテ＋通常カイリュー。メガはフラエッテ</td></tr>
+<tr><td>フェアリーが通る相手</td><td>フラエッテ＋ガオガエン。追い風なしの速度を確認</td></tr>
+<tr><td>鋼への特殊炎と追い風</td><td>カイリュー＋ガオガエン。初手攻撃も比較</td></tr>
+<tr><td>初手から高速で攻撃</td><td>ゴリランダー＋オオニューラで種起動</td></tr>
+<tr><td>ライチュウ＋サーフゴー</td><td>電気を速攻、鋼を後発カイリューで処理</td></tr>
+<tr><td>アーマーガアの防御上昇</td><td>特殊ねっぷうと隣の攻撃を集中</td></tr>
+<tr><td>メガグソクムシャのきゅうけつ</td><td>虫耐性と特殊・物理の炎打点</td></tr>
+<tr><td>相手オオニューラの状態異常</td><td>フラエッテのサイコキネシスを残す</td></tr>
+<tr><td>ミロカロスの水火力</td><td>威嚇を避け、ゴリランダーの草打点</td></tr>
+<tr><td>ドヒドイデの毒・拘束・回復</td><td>妨害を失った対面。地面＋エスパーで集中</td></tr>
+<tr><td>低速トリル</td><td>始動阻止か、成立後4ターンの消費</td></tr>
+<tr><td>雨と鋼の同居</td><td>水半減と草打点。ねっぷうの雨半減に注意</td></tr>
+<tr><td>ゴリランダーの先制技</td><td>カイリューの草1/4と炎打点</td></tr>
+<tr><td>サイコフィールド</td><td>上書きとガオガエンのエスパー無効</td></tr>
+<tr><td>ラフレシア＋コータス</td><td>ねこだましと炎打点。追い風前の速度に注意</td></tr>
+</table></div>
+<p>全パターンは選出確定前の候補。対戦開始後に変更できるのは技選択と選出済み4匹の交代のみ。複数の脅威があれば表を機械的に重ねず、先に負けにつながる方を優先する。</p>
+</section>
+<section class="record-section"><h2>相手別の21選出パターン</h2>
+<h3>基本①：フラエッテ＋ガオガエン</h3>
+<p>先発：メガフラエッテ＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>フェアリーが通り、初手から高速2匹に押し切られにくい相手。フラエッテを主軸にする基本形。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効なねこだまし＋フラエッテの攻撃。集中が濃ければフラエッテをまもる。ねこだまし無効なら炎・悪技、すてゼリフ、通常交代から選ぶ。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ガオガエンの支援で主力の行動回数を確保し、終盤はイダイトウへ。水打点やフィールドが問題ならゴリランダーで対応。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>初手から速さが必要なら基本③、鋼が主な壁なら基本②。フラエッテを追い風で支えたいなら基本④を比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>この4匹に追い風はない。フラエッテはS154のまま。旧エルフーン先発の感覚で上から動けると考えない。</p>
+<h3>基本②：カイリュー＋ガオガエン</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>サーフゴー・メガグソクムシャ・アーマーガアが重く、特殊炎を軸に攻めたい相手。</p>
+<p><strong>初手の候補</strong></p>
+<p>攻撃できるならねっぷう＋ねこだまし・悪技等。次のターン以降に速度逆転が必要で、追い風を使う余裕がある時だけねこだまし＋おいかぜ。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ねっぷうで2匹を削り、イダイトウとゴリランダーで倒し切る。追い風は設置ターンを含め4ターンなので、設置後の攻撃役の着地も考える。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>相手のねこだましが主な妨害なら、初手だけメガせずせいしんりょくで追い風を使い、次ターンにメガする候補もある。通常時の低い耐久で攻撃を耐えるか確認する。</p>
+<p><strong>崩れる条件</strong></p>
+<p>メガするとせいしんりょくを失い、ねこだましで怯む。マルチスケイルは満タン時のみ。ねっぷうは命中90・範囲補正・雨半減・ワイドガードを考慮。</p>
+<h3>基本③：ゴリランダー＋オオニューラ</h3>
+<p>先発：ゴリランダー＋オオニューラ</p>
+<p>後発：メガフラエッテ＋ガオガエン</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>ライチュウなどへ追い風設置前から先手で圧力をかけたい相手。毒・格闘が通ることが条件。</p>
+<p><strong>初手の候補</strong></p>
+<p>グラスシード消費を確認し、有効なねこだまし＋オオニューラの攻撃。相手のねこだまし・集中が濃ければまもる＋ゴリランダーの攻撃。</p>
+<p><strong>中盤の方針</strong></p>
+<p>かるわざS344で攻め、がんせきふうじで後発フラエッテS154の行動順を支える。種消費後はオオニューラを場に残す価値が高い。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>鋼が主な壁なら選出前に後発フラエッテをカイリューへ変更し、メガ対象もカイリューへ変更。これも1試合1メガ。イダイトウを出したい時は基本①・②と比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>この4匹に追い風はない。相手の最速かるわざS378には抜かれる。先制技・麻痺・威嚇・トリルで崩れる。サーフゴーへ毒・格闘は無効。</p>
+<h3>基本④：フラエッテ＋通常カイリュー</h3>
+<p>先発：メガフラエッテ＋通常カイリュー</p>
+<p>後発：ガオガエン＋イダイトウ♂</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>フラエッテを主力にしながら追い風と補助のねっぷうを使いたい相手。通常カイリューのせいしんりょくで本人の怯みを防ぐ。</p>
+<p><strong>初手の候補</strong></p>
+<p>フラエッテへの集中が濃ければ、メガフラエッテのまもる＋通常カイリューのおいかぜ。フラエッテが安全に攻撃できるなら攻撃＋追い風も比較。カイリューはメガシンカさせない。</p>
+<p><strong>中盤の方針</strong></p>
+<p>追い風後はメガフラエッテS308、通常カイリューS290。フラエッテで攻め、カイリューはねっぷうで鋼を削る。ガオガエンで行動回数を支え、終盤はイダイトウへつなぐ。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>鋼が厚く通常カイリューの火力では不足する見込みなら選出前に基本②を比較。初手から速さが必要なら基本③。水やフィールドが主な問題なら後発イダイトウとゴリランダーを選出前に比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>初手はフラエッテS154が通常カイリューS145より速く、追い風がフラエッテの攻撃前に入る保証はない。せいしんりょくは隣を守らない。カイリューはC152・防御115・特防120で、マルチスケイルも持ち物の耐久補助もない。集中攻撃・麻痺・氷技を確認する。</p>
+<h3>対ゴリランダー・先制技</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>グラススライダーで主力を削られ、炎役を出すだけでは交代されて噛み合わなかった相手。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効な威嚇とねこだましで攻撃回数を減らし、ねっぷうで相手2匹へ圧力。カイリューは草1/4だが岩技・氷技には居座らない。</p>
+<p><strong>中盤の方針</strong></p>
+<p>相手のゴリランダーが引いても隣を削る。イダイトウは草技へ直接出さず、倒し切れる場面まで温存。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>フェアリー打点が必要なら基本①へ。ゴリランダー＋オオニューラの毒打点も選出前に比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>先制技保護はない。ねっぷうを選べばふいうちの対象になる。通常せいしんりょくは自分の怯みだけを防ぎ、隣や先制技全般を守らない。</p>
+<h3>対鋼が複数の構築</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>サーフゴー・メガグソクムシャ・アーマーガアでフラエッテを止められる相手。</p>
+<p><strong>初手の候補</strong></p>
+<p>ねっぷうとガオガエンの炎・悪を合わせて優先対象を削る。追い風を自動選択せず、すぐ攻撃する価値を比較。</p>
+<p><strong>中盤の方針</strong></p>
+<p>防御積みには特殊のねっぷうを継続。サーフゴーには10まんばりきや終盤のおはかまいりも使う。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>オオニューラなど毒枠が主な脅威ならフラエッテのサイコキネシスを優先し、対オオニューラへ。</p>
+<p><strong>崩れる条件</strong></p>
+<p>ねっぷうはタイプ不一致で、範囲補正もかかる。一撃処理は保証しない。サーフゴーにねこだまし・すてゼリフ無効、ふうせんに地面無効。</p>
+<h3>対かるわざオオニューラ</h3>
+<p>先発：ガオガエン＋メガフラエッテ</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>フェイタルクローの眠り・麻痺とインファイトの突破を確認。フラエッテのサイコキネシスを処理打点として残す。</p>
+<p><strong>初手の候補</strong></p>
+<p>ねこだましが通るなら相手オオニューラを止めてサイコキネシス。相手の先制技保護・まもる・隣の攻撃を確認。</p>
+<p><strong>中盤の方針</strong></p>
+<p>イダイトウの格闘無効・毒半減とまもるを利用してフラエッテの行動機会を作る。てだすけ役は不在。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>先制技保護が相手にあるなら選出前にイダイトウ＋フラエッテ先発を比較。カイリューは今回の4技に飛行技・エスパー技がなく、直接の代役にはしない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>威嚇でしろいハーブ、グラスフィールドで相手の種を起動させる場合がある。サイコキネシス単発の処理もタスキ・特防上昇・配分次第。</p>
+<h3>対雨＋メガグソクムシャ</h3>
+<p>先発：ゴリランダー＋メガカイリュー</p>
+<p>後発：ガオガエン＋イダイトウ♂</p>
+<p>メガ対象：メガカイリュー</p>
+<p>雨の水打点とメガグソクムシャが同居する相手。特殊炎は増えたが雨を消す手段はない。</p>
+<p><strong>初手の候補</strong></p>
+<p>ねこだましで危険な水枠を止め、必要なら追い風。ゴリランダーの草技とりゅうのはどうで水枠を削る選択も比較。</p>
+<p><strong>中盤の方針</strong></p>
+<p>カイリューの水半減と草1/4を使い、グソクムシャには炎を重ねる。雨下のイダイトウは水火力が上がるが、てきおうりょくなので雨だけでは加速しない。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>ミロカロス同居ならガオガエンの選出・着地を慎重に判断。水枠中心で鋼が薄ければフラエッテ側の選出と比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>雨でねっぷう・フレアドライブが半減。水枠の氷技はカイリューに4倍。ゴリランダーはきゅうけつが弱点。相手のワイドガードも警戒。</p>
+<h3>対低速トリックルーム・コータス</h3>
+<p>先発：ガオガエン＋イダイトウ♂</p>
+<p>後発：メガフラエッテ＋ゴリランダー</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>トリル再遭遇時の比較案。ちょうはつ・ふういん・ほえる・トリル返しは不採用。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効なねこだまし＋始動役への攻撃。止められない並びなら始動役を倒せるか判断し、難しければ隣の火力を削る。</p>
+<p><strong>中盤の方針</strong></p>
+<p>成立後の4ターンを数え、まもる＋隣の攻撃、耐性への交代、新たに出したねこだまし役で消費。コータスのHPを削りふんかを弱める。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>鋼や草が多い場合は選出前にフラエッテをカイリューへ替え、メガ対象も変更。晴れのねっぷうを使うが、トリル中は追い風を優先しない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>晴れで水半減。相手リキキリン等のノーマル複合におはかまいり無効。速度補正で優先度は変わらず、連続まもるの成功も保証されない。</p>
+<h3>対イエッサン＋ワイドフォース</h3>
+<p>先発：ガオガエン＋ゴリランダー</p>
+<p>後発：メガフラエッテ＋イダイトウ♂</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>サイコフィールドと全体エスパー技が主な脅威。</p>
+<p><strong>初手の候補</strong></p>
+<p>実際に残ったフィールドを確認。サイコ中は接地相手へのねこだましを避け、DDラリアット等で攻撃。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ゴリランダーの再登場でフィールドを取り直し、フラエッテの攻撃を通す。ガオガエンのエスパー無効は隣を守らない。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>鋼同居なら選出前にカイリュー側を比較。トリルが主なら対低速トリックルームへ。</p>
+<p><strong>崩れる条件</strong></p>
+<p>オオニューラはエスパー4倍。イエッサンへゴースト無効。通常カイリューにもメガカイリューにもエスパー耐性はない。</p>
+<h3>対メガスコヴィラン＋サーフゴー</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>特殊炎でサーフゴーを削り、カイリューの草・炎耐性を使う比較案。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効なねこだましでスコヴィランを止め、ねっぷう。相手が守る場合や炎を受ける相手へのりゅうのはどうも比較。</p>
+<p><strong>中盤の方針</strong></p>
+<p>サーフゴーを削ってからイダイトウを安全に出す。晴れでもおはかまいりは弱まらない。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>相手の特殊高火力が重い場合はカイリューのまもると攻撃先を再判断。草技へのイダイトウ後投げを避ける。</p>
+<p><strong>崩れる条件</strong></p>
+<p>炎・草のスコヴィランへ炎は等倍。サーフゴーにねこだまし・すてゼリフ無効。ねっぷうの外れや相手の持ち物で処理は変わる。</p>
+<h3>対炎中心・リザードンの晴れ</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>晴れで水技を弱められ、草技も合わせられる炎中心の相手。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効なねこだましで危険な相手を止め、りゅうのはどうか追い風。炎耐性相手へねっぷうを連打しない。</p>
+<p><strong>中盤の方針</strong></p>
+<p>カイリューの炎半減と草1/4を使い、相手を削ってからイダイトウへ。晴れ中のおはかまいりも比較。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>ラフレシア＋コータスなら専用案へ。フェアリー相手にはりゅうのはどう無効なのでフラエッテ選出も比較。</p>
+<p><strong>崩れる条件</strong></p>
+<p>氷4倍・岩2倍。マルチスケイルは集中攻撃の2発目を軽減しないことがある。ようりょくそは追い風後の速度も確認。</p>
+<h3>対イエッサン・サーナイト・グソクムシャ同居</h3>
+<p>先発：ガオガエン＋メガフラエッテ</p>
+<p>後発：ゴリランダー＋イダイトウ♂</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>相手6匹に複数のメガ候補があり、どちらが来るか決め打ちしにくい場合。</p>
+<p><strong>初手の候補</strong></p>
+<p>サーナイト側にはフラエッテとガオガエンの攻撃を比較。グソクムシャ側には威嚇と炎打点。このゆびとまれを考慮。</p>
+<p><strong>中盤の方針</strong></p>
+<p>サイコフィールドはゴリランダーで上書き。メガグソクムシャには虫半減のイダイトウを残す。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>相手の鋼が特に重いなら選出前にカイリュー側へ変更。ただしサーナイトのフェアリー技が弱点になる。</p>
+<p><strong>崩れる条件</strong></p>
+<p>自分も相手も1試合1メガ。相手の持ち物・選出が未確認の段階で両方のメガが同時に出る前提にしない。</p>
+<h3>対メガライチュウX＋サンダース</h3>
+<p>先発：ゴリランダー＋オオニューラ</p>
+<p>後発：メガフラエッテ＋ガオガエン</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>過去に確認したメガライチュウX＋サンダース。直近のでんじほう報告とは区別。</p>
+<p><strong>初手の候補</strong></p>
+<p>種消費を確認し、有効なねこだまし＋オオニューラの攻撃。相手のメガ時にエレキへ上書きされても消費済みのかるわざは残る。</p>
+<p><strong>中盤の方針</strong></p>
+<p>インファイト・10まんばりきで電気枠を削り、後発フラエッテの攻撃機会を作る。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>相手のねこだましが濃ければまもる＋ゴリランダーの攻撃。速度は相手の形態・能力変化・追い風で再確認。</p>
+<p><strong>崩れる条件</strong></p>
+<p>電気無効は不在。カイリューはドラゴン半減と飛行弱点で電気等倍。草タイプも麻痺無効ではない。</p>
+<h3>対ラフレシア＋コータス</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>晴れラフレシアのヘドロばくだんとコータスのふんかを確認。旧エルフーン＋リキキリン先発を終了。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効なねこだましをラフレシアへ使い、カイリューはねっぷうで削るか追い風。晴れの炎強化も使う。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ラフレシアの処理を優先し、イダイトウをコータスへ安全に出す。コータスのHPを削ってふんかを弱める。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>初手からコータスを削る必要が強ければガオガエン＋イダイトウ先発も比較。トリル同居なら追い風を自動選択しない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>追い風前S167は晴れ最速ラフレシアS224より遅い。カイリューは毒等倍だが眠りは防げない。晴れで水技半減、ねっぷうはコータスへ半減。</p>
+<h3>対ミロカロス・威嚇後の水火力</h3>
+<p>先発：ゴリランダー＋メガフラエッテ</p>
+<p>後発：イダイトウ♂＋オオニューラ</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>威嚇後の水技に押し切られた報告。かちき表示は未確認だが、ガオガエンを自動選出しない。</p>
+<p><strong>初手の候補</strong></p>
+<p>草打点とフラエッテの攻撃で集中。隣が危険ならねこだまし＋攻撃。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ゴリランダーを温存し、相手の回復を許すほど削りを分散させない。オオニューラは残ったグラスフィールドで種を起動する。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>ねっぷうが必要な隣なら選出前にフラエッテをカイリューへ変更。ただし相手の氷技がカイリューに4倍。</p>
+<p><strong>崩れる条件</strong></p>
+<p>がんせきふうじはかちきを起動し得る。ムーンフォースの特攻低下も同様。アンコール・がむしゃらは失い、回復への妨害手段はない。</p>
+<h3>対ドヒドイデ・毒と拘束</h3>
+<p>先発：ゴリランダー＋メガフラエッテ</p>
+<p>後発：ガオガエン＋イダイトウ♂</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>じこさいせい・どくどく・まとわりつくを確認。アンコール・がむしゃらを失ったため対策が後退。</p>
+<p><strong>初手の候補</strong></p>
+<p>10まんばりき＋サイコキネシスの集中を比較。草技は水・毒へ等倍。</p>
+<p><strong>中盤の方針</strong></p>
+<p>回復前に倒し切るため削りを集中し、拘束される前に攻撃役を並べる。継続ダメージとウッドハンマーの反動を確認。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>初手から出てこない場合もフラエッテ・ゴリランダーを雑に失わない。突破できない試合が続けば技変更を再検討する。</p>
+<p><strong>崩れる条件</strong></p>
+<p>ちょうはつ・アンコールは不在。カイリューのねっぷうは半減で対策にならない。現行構成で安定突破は未確立。</p>
+<h3>対ライチュウ＋サーフゴー</h3>
+<p>先発：ゴリランダー＋オオニューラ</p>
+<p>後発：メガカイリュー＋ガオガエン</p>
+<p>メガ対象：メガカイリュー</p>
+<p>相手先発ライチュウ＋サーフゴー、後発ウインディを確認。形態と初手の技は未確認。</p>
+<p><strong>初手の候補</strong></p>
+<p>種を起動し、オオニューラの攻撃をライチュウ、ゴリランダーの地面技をサーフゴーへ振り分ける候補。ねこだまし・まもる・ふうせんで行動を変える。</p>
+<p><strong>中盤の方針</strong></p>
+<p>サーフゴーはカイリューの特殊ねっぷうでも削る。ウインディの威嚇でねっぷう火力は下がらない。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>相手のねこだましで初手が崩れる見込みなら、選出前にカイリュー＋ガオガエン先発と比較。メガ前せいしんりょくで追い風を使う手もある。</p>
+<p><strong>崩れる条件</strong></p>
+<p>オオニューラの毒・格闘はサーフゴーに無効。カイリューは電気等倍で麻痺する。通常時とメガ後の速度・耐久を混同しない。</p>
+<h3>対メガグソクムシャ・きゅうけつ主体</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>きゅうけつによる直接突破を確認。炎4倍へ特殊・物理の両方から攻撃する。</p>
+<p><strong>初手の候補</strong></p>
+<p>有効な威嚇を入れ、ねっぷう＋フレアドライブ等の集中を比較。相手の隣が危険ならねこだましやまもる。</p>
+<p><strong>中盤の方針</strong></p>
+<p>カイリュー・イダイトウは虫半減。防御を積まれてもねっぷうの威力は落ちない。きゅうけつの回復を上回る削りを狙う。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>雨なら専用案へ。ゴリランダーは相手の水枠やフィールド担当で、グソクムシャの処理役として出さない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>メガ後は虫・鋼。ねっぷうはタイプ不一致・範囲補正・命中90。雨・特殊耐久・ワイドガードで崩れる。岩技はカイリューへ弱点。</p>
+<h3>対アーマーガア・回復と積み</h3>
+<p>先発：メガカイリュー＋ガオガエン</p>
+<p>後発：イダイトウ♂＋ゴリランダー</p>
+<p>メガ対象：メガカイリュー</p>
+<p>敗戦報告を反映。実際の技・特性・隣は未確認。特殊ねっぷうを新たな主打点にする。</p>
+<p><strong>初手の候補</strong></p>
+<p>ねっぷうとガオガエンの攻撃を重ねる。防御上昇を使われても特殊打点を継続し、回復だけで追いつかれる展開を避ける。</p>
+<p><strong>中盤の方針</strong></p>
+<p>ミラーアーマーでガオガエンの攻撃が下がってもカイリューの特殊火力は維持。相手の隣がカイリューを止めるなら先に処理する。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>先に追い風を使うかは隣の速度次第。アーマーガアだけを見て補助ターンを増やさない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>はねやすめ中も鋼の炎弱点は残る。特殊炎でも回復を上回る保証はない。アンコール・がむしゃら不在。岩封じはミラーアーマーで反射される。</p>
+<h3>対ライチュウ・でんじほう連打</h3>
+<p>先発：ゴリランダー＋オオニューラ</p>
+<p>後発：メガフラエッテ＋ガオガエン</p>
+<p>メガ対象：メガフラエッテ</p>
+<p>でんじほう連打による麻痺を確認。形態・隣は未確認で、メガライチュウYだった場合も想定。</p>
+<p><strong>初手の候補</strong></p>
+<p>種消費でS344を作り、有効なねこだまし＋インファイトを比較。相手のねこだまし・まもる・隣の攻撃を考慮。</p>
+<p><strong>中盤の方針</strong></p>
+<p>麻痺していないかるわざS344ならメガライチュウYの最速S200を上回る。削り残しは地面打点も使う。</p>
+<p><strong>別先発・選出の分岐</strong></p>
+<p>サーフゴー同伴なら対ライチュウ＋サーフゴーのカイリュー入りへ。カイリュー先発は追い風前にYより遅く、電気無効でもない。</p>
+<p><strong>崩れる条件</strong></p>
+<p>麻痺でかるわざS344は172へ低下。草フィールドで麻痺は防げない。相手の配分・形態未確認のため一撃処理を保証しない。</p>
+</section>
+<section class="record-section"><h2>採用方針と変更点</h2>
+<p>エルフーンからカイリューへ変更。他5匹の育成設定は維持。カイリューの性格・配分は今回の推奨設定。メガを選ぶ基本4選出へ更新し、先制追い風・アンコール・がむしゃらの旧手順を終了。</p>
+<h3>カイリューの推奨育成設定</h3>
+<p>エルフーンから変更。4技は合意済み。性格・配分・メガ前特性は今回の推奨設定として記録し、実戦後に調整する。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>設定・理由</th></tr>
+<tr><td>性格・SP</td><td>おくびょう／H2 C32 S32。耐久調整を決め打ちせず、特殊火力と追い風前の速度を確保</td></tr>
+<tr><td>特性・持ち物</td><td>メガ前せいしんりょく→メガ後マルチスケイル／カイリュナイト</td></tr>
+<tr><td>技</td><td>ねっぷう／りゅうのはどう／おいかぜ／まもる</td></tr>
+<tr><td>メガ後の実数値</td><td>HP168／攻撃129／防御135／特攻197／特防145／素早さ167</td></tr>
+<tr><td>通常時の実数値</td><td>HP168／攻撃138／防御115／特攻152／特防120／素早さ145</td></tr>
+<tr><td>ひかえめとの比較</td><td>同じ配分ならメガ後C216・S152。今回は火力より先に追い風・攻撃を使える範囲を優先。おくびょうでも最速メガライチュウYのS200には届かない</td></tr>
+</table></div>
+<p>他5匹の育成設定は維持。メガ後の画像・実数値をメガ前の耐久・速度として扱わない。</p>
+<h3>フラエッテとカイリューのメガ選択</h3>
+<p>チームに2匹を登録し、原則として選出段階で使うメガを1匹決める。1試合でメガシンカできるのは1匹だけ。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>相手・目的</th><th>選択</th></tr>
+<tr><td>フェアリーが通る・相手オオニューラが重要</td><td>メガフラエッテ。サイコキネシスの打点も重視</td></tr>
+<tr><td>鋼が重い・特殊炎と追い風が必要</td><td>メガカイリュー。ねっぷうで削り、イダイトウ等につなぐ</td></tr>
+<tr><td>電気枠などへ即座に圧力</td><td>ゴリランダー＋オオニューラから展開。後発のメガを相手に合わせる</td></tr>
+<tr><td>基本④：同時選出による追い風支援</td><td>先発メガフラエッテ＋通常カイリュー、後発ガオガエン＋イダイトウ。通常カイリューはC152・S145で追い風とねっぷうを担当</td></tr>
+<tr><td>両選出時の注意</td><td>フラエッテS154が通常カイリューS145より速い。初手に必ず追い風→フラエッテ攻撃の順になるわけではない。相手のフェアリー技もフェアリーオーラで強化され、カイリューの弱点を突く</td></tr>
+</table></div>
+<p>カイリューをメガにする試合で、フラエッテをメガ後の能力・フェアリーオーラ前提で運用しない。全選出カードに予定メガを明示。</p>
+<h3>追い風の設置と初手の分岐</h3>
+<p>いたずらごころによる先制追い風から、通常優先度の追い風へ変更。毎回の初手設置はやめる。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>盤面</th><th>初手の候補</th></tr>
+<tr><td>既に先手で有効打を撃てる</td><td>ねっぷう等で攻撃。不要な追い風で攻撃機会を失わない</td></tr>
+<tr><td>速度逆転が必要・ねこだましが有効</td><td>ガオガエンで危険な相手を止め、カイリューで追い風</td></tr>
+<tr><td>相手のねこだましが濃い</td><td>通常せいしんりょくのまま追い風、またはまもる＋隣の攻撃を比較。メガ前にはマルチスケイルがない</td></tr>
+<tr><td>トリル成立が濃い</td><td>追い風より始動役・攻撃役へのダメージを優先</td></tr>
+<tr><td>ライチュウ等が先に麻痺を入れる</td><td>追い風を張れる前提にしない。ゴリランダー＋オオニューラの速攻を比較</td></tr>
+</table></div>
+<p>追い風は使用ターンを含め4ターン。メガ後S334でも相手のかるわざ準速344・最速378には届かない。通常カイリューの追い風中S290と区別。</p>
+<h3>鋼3匹への特殊炎と攻撃分担</h3>
+<p>炎打点はカイリューの特殊ねっぷうとガオガエンの物理フレアドライブ。防御上昇や威嚇で両方の火力が同時に下がる状況を減らす。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>相手・条件</th><th>行動</th></tr>
+<tr><td>サーフゴー</td><td>ねっぷう＋悪・地面・おはかまいりを比較。ねこだまし・すてゼリフは無効</td></tr>
+<tr><td>メガグソクムシャ</td><td>虫・鋼の炎4倍を狙う。雨・特殊耐久・ワイドガードを考慮。電気・地面・岩・格闘は等倍</td></tr>
+<tr><td>アーマーガア</td><td>特殊炎で防御上昇を迂回。はねやすめ中も炎弱点。隣の妨害役と回復量を確認</td></tr>
+<tr><td>ねっぷうの限界</td><td>威力95・命中90。タイプ不一致。相手2匹を対象にする場面は範囲補正0.75倍。1匹がまもるでも補正が消える前提にしない</td></tr>
+<tr><td>範囲技への対策</td><td>雨で炎半減。ワイドガードで防がれる。りゅうのはどうは単体だが鋼半減なので、隣の単体技も必要</td></tr>
+</table></div>
+<p>特殊炎の追加は改善案で、一撃処理や回復を上回る保証ではない。ねっぷうを撃てた回数と削り量を記録する。</p>
+<h3>オオニューラの継続運用</h3>
+<p>いじっぱり／かるわざ／グラスシード／H2 A32 S32。フェイタルクロー・インファイト・がんせきふうじ・まもるを維持。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>条件</th><th>運用</th></tr>
+<tr><td>種消費</td><td>防御＋1、S172→344。交代で能力上昇とかるわざを失う</td></tr>
+<tr><td>追い風併用</td><td>S688。ただしフラエッテ側の基本③には追い風役がいない</td></tr>
+<tr><td>がんせきふうじ</td><td>命中95、対象1匹のSを1段階低下。S200→133なら通常のメガフラエッテS154が上回る</td></tr>
+<tr><td>能力低下への反応</td><td>ミラーアーマー・まけんき・かちきを確認。ミロカロスへの安易な岩封じを避ける</td></tr>
+<tr><td>先制技</td><td>かるわざでもねこだまし・グラススライダー・ふいうちを防げない</td></tr>
+</table></div>
+<p>消費済みの種は再登場で使えない。グラスフィールドを後から上書きされても、居座っている間のかるわざは残る。</p>
+<h3>トリックルームの阻止と4ターンの消費</h3>
+<p>専用技は不採用。カイリューの追い風を加えてもトリル対策は増えない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>局面</th><th>判断</th></tr>
+<tr><td>始動前</td><td>有効なねこだましか集中攻撃で阻止。相手の先制技保護・ゴースト・このゆびとまれを確認</td></tr>
+<tr><td>阻止が難しい時</td><td>隣の攻撃役を削る。コータスはHPを落としてふんかを弱める</td></tr>
+<tr><td>成立後</td><td>残り4ターンを数え、まもる＋隣の攻撃、耐性への交代、新たなねこだまし役で消費</td></tr>
+<tr><td>終了直前</td><td>次の通常速度で動ける攻撃役を残す。連続まもるに依存しない</td></tr>
+</table></div>
+<p>構築全体でまもる4匹だが、各選出では所持者を数え直す。ほえる・ふういん・トリル返しは追加していない。</p>
+<h3>終了する旧方針と残る課題</h3>
+<p>基本選出を3本へ再構成。現在使えない技を前提にした旧手順を削除し、過去の構成は履歴に保存する。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>項目</th><th>変更</th></tr>
+<tr><td>旧基本選出</td><td>エルフーン＋フラエッテの先制追い風を終了</td></tr>
+<tr><td>失う妨害</td><td>アンコール・がむしゃら・きあいのタスキ。回復や積みへの対応が後退</td></tr>
+<tr><td>増やす役割</td><td>特殊炎、地面無効、草1/4、まもる所持者。追い風は通常優先度</td></tr>
+<tr><td>残す制約</td><td>先制技全体保護・電気無効・ちょうはつ・トリル解除は不在</td></tr>
+<tr><td>重点検証</td><td>ドヒドイデの回復、雨下の鋼、麻痺、メガ前後のねこだまし、追い風を使えずに倒れる試合</td></tr>
+</table></div>
+<p>性格・配分を含むカイリューの新設定と選出案は未実戦。敗戦ごとに構築全体を変えず、最初に崩れた判断を記録。</p>
+</section>
+<section class="record-section"><h2>加速条件ごとの行動順</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>ポケモン・形態</th><th>補正なしS</th><th>追い風のみ</th><th>かるわざのみ</th><th>両方</th></tr>
+<tr><td>メガフラエッテ</td><td>154</td><td>308</td><td>—</td><td>—</td></tr>
+<tr><td>イダイトウ♂</td><td>130</td><td>260</td><td>—</td><td>—</td></tr>
+<tr><td>ガオガエン</td><td>80</td><td>160</td><td>—</td><td>—</td></tr>
+<tr><td>ゴリランダー</td><td>113</td><td>226</td><td>—</td><td>—</td></tr>
+<tr><td>メガカイリュー</td><td>167</td><td>334</td><td>—</td><td>—</td></tr>
+<tr><td>カイリュー（メガ前）</td><td>145</td><td>290</td><td>—</td><td>—</td></tr>
+<tr><td>オオニューラ</td><td>172</td><td>344</td><td>344</td><td>688</td></tr>
+</table></div>
+<p>カイリューはメガ後S167→334、メガ前S145→290。基本①・③に追い風役はいない。オオニューラのかるわざはS344、追い風併用S688。相手の最速かるわざS378はメガカイリューの追い風S334より速い。先制技・麻痺・トリルも考慮する。</p>
+</section>
+<section class="record-section"><h2>運用の確認</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>確認点</th><th>行動の目安</th></tr>
+<tr><td>メガ対象の決定</td><td>選出画面でフラエッテかカイリューのどちらをメガにするか決める。1試合1匹。基本①・③・④はフラエッテ、基本②はカイリュー。基本④のカイリューは通常のまま使う。</td></tr>
+<tr><td>追い風の役割変更</td><td>カイリューの追い風は通常優先度。相手のねこだまし・麻痺・高速攻撃を考慮し、攻撃できる場面では直接攻撃も比較する。</td></tr>
+<tr><td>マルチスケイルの維持</td><td>メガ後かつHP満タン時に被ダメージ半減。集中攻撃や天候・状態異常で満タンを失う。はねやすめは不採用。飛行タイプのカイリューは通常グラスフィールドで回復しない。</td></tr>
+<tr><td>グラスシードとかるわざ</td><td>ゴリランダーのグラスフィールドで種を消費すると防御＋1、かるわざで素早さ2倍。種消費後にフィールドを上書きされても効果は残る。交代すると能力上昇とかるわざを失い、消費済みの種で再起動はできない。</td></tr>
+<tr><td>ねこだましの可否</td><td>所持者はガオガエンとゴリランダーの2匹。オオニューラには不採用。場に出た最初の行動ターンだけ有効。相手のゴースト・テイルアーマー・じょおうのいげん・接地相手のサイコフィールドを確認する。</td></tr>
+<tr><td>先制技保護の喪失</td><td>全体保護は不在。カイリューの通常せいしんりょくは本人の怯みを防ぐだけ。メガ後は失う。追い風やかるわざで先制技の優先度は逆転しない。</td></tr>
+<tr><td>まもるの所持者</td><td>フラエッテ・カイリュー・イダイトウ・オオニューラの4匹。各試合の選出に含まれる所持者を確認し、隣の攻撃や交代に合わせて使う。</td></tr>
+<tr><td>がんせきふうじの対象</td><td>威力60・命中95、相手1匹の素早さを1段階下げる通常攻撃。ミラーアーマー・まけんき・かちきには注意。まもるや外れで速度操作が成立しない場合もある。</td></tr>
+<tr><td>フィールドの取り直し</td><td>グラスフィールドは麻痺無効を付与しない。ゴリランダーはとんぼがえり不採用で、取り直しには通常交代を使う。相手のサイコフィールドをワイドフォースで逆利用する方針は終了。</td></tr>
+<tr><td>交代技の行動順</td><td>すてゼリフより相手が後に動くと交代先が攻撃を受ける。追い風中は先に交代してしまう場面が増える。安全な着地を保証する技ではない。</td></tr>
+<tr><td>威嚇と能力下降</td><td>まけんき・かちき・ミラーアーマー・しろいハーブを確認。がんせきふうじも能力下降を起こす。フラエッテの特殊攻撃は威嚇で弱まらないが、オオニューラの物理火力は下がる。</td></tr>
+<tr><td>トリル中の4ターン</td><td>始動後の4ターンを数える。まもる＋隣の攻撃、耐性への交代、新たに出したねこだまし役で消費させる。ちょうはつ・ほえる・封印・トリル返しは不採用。</td></tr>
+<tr><td>晴れ・雨と水火力</td><td>晴れで水半減、雨で強化。てきおうりょくイダイトウは雨だけでは速くならない。にほんばれ・あまごいは不採用。</td></tr>
+<tr><td>おはかまいりの終盤</td><td>味方のひんし0／1／2／3匹で威力50／100／150／200。晴れでも弱まらないがノーマルには無効。</td></tr>
+<tr><td>メガグソクムシャの相性</td><td>通常は虫・水、メガ後は虫・鋼。炎4倍、草1/4、電気・地面・水・ゴースト・岩・格闘は等倍。きゅうけつは通常攻撃。ゴリランダーは虫弱点、オオニューラは虫1/4。</td></tr>
+<tr><td>麻痺と速度</td><td>麻痺した追い風フラエッテはS154。麻痺したかるわざオオニューラはS172で、追い風も重なればS344。フィールド上書きだけで麻痺は防げない。</td></tr>
+</table></div>
+</section>
+<section class="record-section"><h2>対戦後の記録</h2>
+<p>相手6匹／メガ対象とメガしたターン／自分の先発2匹と後発2匹／初手の4行動／最初に倒れたポケモン／種消費と交代／先制技・麻痺／フィールド・天候・トリル／次に変える判断を1つ。鋼対策では「炎技を撃つ機会がなかった」「撃ったが倒せなかった」「雨・水技で動けなかった」を区別。相手の防御振りなど未確認情報は推測として記録する。</p>
+</section>
+<section class="record-section"><h2>参考資料</h2>
+<ul>
+<li><a href="https://news.pokemon-home.com/ja/page/816.html" target="_blank" rel="noopener noreferrer">M-C公式ルール・メガシンカは1試合1匹</a></li>
+</ul>
+<ul>
+<li><a href="https://www.pokesuku.com/champions/pokedex/dragonite-mega" target="_blank" rel="noopener noreferrer">メガカイリューの能力・習得技</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/554673" target="_blank" rel="noopener noreferrer">カイリューの通常・メガ特性と運用</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/555117" target="_blank" rel="noopener noreferrer">せいしんりょくの効果</a></li>
+</ul>
+<ul>
+<li><a href="https://www.pokesuku.com/champions/moves/257" target="_blank" rel="noopener noreferrer">ねっぷうの威力・命中・範囲補正</a></li>
+</ul>
+<ul>
+<li><a href="https://game8.jp/pokemon-champions/778593" target="_blank" rel="noopener noreferrer">ワイドガードの効果</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/554752" target="_blank" rel="noopener noreferrer">カイリュナイトの表記・効果</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/07/23/sneasler-mb-double/" target="_blank" rel="noopener noreferrer">オオニューラのグラスシード・かるわざ運用（2026-09-25確認）</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/07/15/raichu-mb-double/" target="_blank" rel="noopener noreferrer">メガライチュウYの種族値・運用（2026-09-25確認）</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/555191" target="_blank" rel="noopener noreferrer">アーマーガアの型・対策（2026-09-24確認）</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/554986" target="_blank" rel="noopener noreferrer">オオニューラのかるわざ・型・対策（2026-09-24確認）</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/554911" target="_blank" rel="noopener noreferrer">フェイタルクローの状態異常（2026-09-24確認）</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/07/07/incineroar-mb-double/" target="_blank" rel="noopener noreferrer">ガオガエンの配分・ダブル運用</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/574661" target="_blank" rel="noopener noreferrer">ゴリランダーの技・持ち物・運用</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/561710" target="_blank" rel="noopener noreferrer">フィールドの仕様</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/04/12/pokemon-champions-double-battle-for-beginners-2-2/" target="_blank" rel="noopener noreferrer">先制技を防ぐ特性</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/564244" target="_blank" rel="noopener noreferrer">ラフレシアの晴れ運用</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/562861" target="_blank" rel="noopener noreferrer">メガライチュウX</a></li>
+</ul>
+<ul>
+<li><a href="https://appmedia.jp/pokemonchampions/79928374" target="_blank" rel="noopener noreferrer">トリルの仕様・対策</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/564122" target="_blank" rel="noopener noreferrer">サーフゴーのおうごんのからだ</a></li>
+</ul>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/575652" target="_blank" rel="noopener noreferrer">メガグソクムシャのタイプ・通常攻撃</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/07/13/milotic-mb-double/" target="_blank" rel="noopener noreferrer">ミロカロスとかちき</a></li>
+</ul>
+<ul>
+<li><a href="https://liberty-note.com/2026/08/12/toxapex-mb-double/" target="_blank" rel="noopener noreferrer">ドヒドイデのダブル運用</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/smogon/damage-calc" target="_blank" rel="noopener noreferrer">ダメージ計算式の実装</a></li>
+</ul>
+</section>
+</article><article id="singles" class="strategy" role="tabpanel" aria-labelledby="tab-singles" hidden>
+<div class="section-heading"><div><p class="eyebrow">TEAM STRATEGY</p><h2>メガギャラドス軸</h2></div><span class="badge">9/13版・実戦課題あり</span></div>
+<div class="flow"><div><span>削り</span><p>ガブリアスのステロ・さめはだ・ゴツメ</p></div><div><span>展開</span><p>ギャラドスのりゅうのまい</p></div><div><span>別の勝ち筋</span><p>サーフゴーのわるだくみで崩す</p></div></div>
+<section class="record-section"><h2>確定構成</h2>
+<div class="team-grid"><div class="team-card"><div class="card-top"><span class="number">01</span><h3>サーフゴー</h3></div>
+<p class="item">ふうせん</p><dl><dt>特性</dt><dd>おうごんのからだ</dd><dt>性格・配分</dt><dd>おくびょう / H2・C32・S32</dd></dl>
+<div class="moves"><span>ゴールドラッシュ</span><span>シャドーボール</span><span>わるだくみ</span><span>じこさいせい</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">02</span><h3>ギャラドス</h3></div>
+<p class="item">ギャラドスナイト</p><dl><dt>特性</dt><dd>いかく → かたやぶり</dd><dt>性格・配分</dt><dd>ようき / A32・S32・D2</dd></dl>
+<div class="moves"><span>たきのぼり</span><span>じしん</span><span>りゅうのまい</span><span>ちょうはつ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">03</span><h3>アシレーヌ</h3></div>
+<p class="item">オボンのみ</p><dl><dt>特性</dt><dd>げきりゅう</dd><dt>性格・配分</dt><dd>ひかえめ / H32・C32・B2</dd></dl>
+<div class="moves"><span>なみのり</span><span>ムーンフォース</span><span>れいとうビーム</span><span>アンコール</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">04</span><h3>ヒートロトム</h3></div>
+<p class="item">こだわりスカーフ</p><dl><dt>特性</dt><dd>ふゆう</dd><dt>性格・配分</dt><dd>おくびょう / C32・S32・D2</dd></dl>
+<div class="moves"><span>オーバーヒート</span><span>10まんボルト</span><span>ボルトチェンジ</span><span>トリック</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">05</span><h3>ガブリアス</h3></div>
+<p class="item">ゴツゴツメット</p><dl><dt>特性</dt><dd>さめはだ</dd><dt>性格・配分</dt><dd>わんぱく / H32・B32・D2</dd></dl>
+<div class="moves"><span>じしん</span><span>ステルスロック</span><span>ドラゴンテール</span><span>がんせきふうじ</span></div></div>
+<div class="team-card"><div class="card-top"><span class="number">06</span><h3>マスカーニャ</h3></div>
+<p class="item">たつじんのおび</p><dl><dt>特性</dt><dd>しんりょく</dd><dt>性格・配分</dt><dd>ようき / A32・S32・D2</dd></dl>
+<div class="moves"><span>トリックフラワー</span><span>トリプルアクセル</span><span>ふいうち</span><span>かわらわり</span></div></div></div>
+<p>配分はチャンピオンズの能力ポイントで各個体合計66。従来作品の努力値表記とは異なる。H＝HP、A＝攻撃、B＝防御、C＝特攻、D＝特防、S＝素早さ。</p>
+</section>
+<section class="record-section"><h2>決定事項と採用理由</h2>
+<ul>
+<li>メガルカリオZの枠をサーフゴーへ変更。メガギャラドスと同時選出しても両方の性能を活かせることを重視。メガ枠はギャラドス1体とし、毎試合の選出・メガシンカは必須としない。</li>
+<li>ストリンダーへの変更は見送り、ヒートロトムを継続。</li>
+<li>サーフゴーのふうせんは地面技を一時的に無効化し、わるだくみ・じこさいせいの機会を作る目的。攻撃で割れた後も地面を無効化できるわけではない。CS配分なので万能な受け役にはしない。</li>
+<li>アシレーヌはオボンのみ、ガブリアスはゴツゴツメットを採用。</li>
+<li>ギャラドスはかみくだくをちょうはつへ変更済み。あくび・回復・積み技・吹き飛ばしなどへの対策を重視。じしんはメガ後のかたやぶりでロトムのふゆうを無視できる点も評価。</li>
+<li>ガブリアスはどくづきを見送り、がんせきふうじを継続。HB配分の役割に合う素早さ操作を重視。地面等倍のフェアリーには一致じしんと抜群どくづきの威力差が小さい。</li>
+<li>マスカーニャはユーザー希望でたつじんのおび。特性はしんりょく。きあいのタスキやへんげんじざいへ変更していない。</li>
+<li>マスカーニャのはたきおとす枠はとんぼがえり・けたぐり等も比較したうえでかわらわりに確定。格闘打点と壁の破壊を兼任。</li>
+<li>けたぐりはドドゲザンに威力100、ブリジュラスに80。かわらわりは固定75で、リフレクター・ひかりのかべ・オーロラベールを破壊。ブリジュラスへの威力差は小さいが、ドドゲザンへの火力はけたぐりが高い。</li>
+<li>ギャラドスのかみくだくとマスカーニャのはたきおとすは両方とも不採用。悪技はふいうちだけなので、変化技を使う相手への安定した悪打点はない。ゴースト打点はサーフゴーのシャドーボールで確保。</li>
+</ul>
+</section>
+<section class="record-section"><h2>構築査定</h2>
+<p>相談時の机上評価ではマスターボール級で十分戦える構成。現時点で必須の変更はなく、固定して選出と立ち回りを検証する方針。実戦勝率や上位帯での安定性は未検証で、到達や勝率を保証する評価ではない。</p>
+<h3>強みと勝ち筋</h3>
+<ul>
+<li>ガブリアスのステロ・さめはだ・ゴツメで削り、ギャラドスのりゅうのまいから全抜きを狙える。</li>
+<li>サーフゴーのわるだくみ・じこさいせいで耐久寄りの相手を崩す別の勝ち筋がある。</li>
+<li>ロトムのスカーフとマスカーニャの素早さ・ふいうちで終盤を詰められる。</li>
+<li>物理と特殊の攻め手がそろい、ちょうはつ・アンコール・トリック・ドラゴンテール・かわらわりで相手の展開にも干渉できる。</li>
+</ul>
+<h3>注意点</h3>
+<ol>
+<li><strong>積んだ高速エースへの切り返し</strong>：最速メガボーマンダはりゅうのまい1回でS283となり、スカーフロトムのS226でも抜けない。タスキ持ちもいないため、氷技があるだけで安全とはいえない。自由に積ませず、ガブリアスのがんせきふうじ・ドラゴンテールやアシレーヌの氷打点を使う。ドラゴンテールも相手の攻撃を耐えられるか判断が必要。</li>
+<li><strong>ロトムへの役割集中</strong>：鋼・草への対応、交代技、高速相手の処理を兼任。メガグソクムシャ・メガハッサム等がいる試合では特にHPを残す。高速相手が残っている状況でのスカーフトリックは慎重に判断。</li>
+<li><strong>ステルスロックによる消耗</strong>：ロトムとメガ前のギャラドスは登場時に最大HPの約1/4を失う。除去技がなく、回復技持ちもサーフゴーだけなので長い交代戦は苦手。</li>
+<li><strong>ギャラドスの攻撃範囲</strong>：水・地面の2技ではボーマンダや草タイプなどに通しにくい。ちょうはつで回復を止めても必ず突破できるわけではない。選出段階でサーフゴーやアシレーヌを勝ち筋にする判断も必要。</li>
+<li><strong>マスカーニャの行動機会</strong>：帯は抜群火力を補うが、タスキのように一撃を耐える保証はない。ふいうちは相手の変化技や交代には通らず、アクセルにも命中の不安がある。</li>
+</ol>
+</section>
+<section class="record-section"><h2>ギャラドスの運用</h2>
+<ul>
+<li>序盤のいかくと終盤のりゅうのまいを使い分ける。AS配分・回復なしなので繰り返し受け続ける役にはしない。</li>
+<li>メガ前は地面無効・格闘半減。メガ後はエスパー無効・ゴースト半減になる一方、草・格闘・虫・フェアリーが弱点になる。電気は4倍から2倍へ変わる。</li>
+<li>交代で出す瞬間にはメガシンカできないため、メガ前の状態でエスパー技へ無効受けはできない。</li>
+<li>かたやぶりのじしんはふゆうを無視するが、ひこうタイプの地面無効は無視しない。</li>
+<li>ちょうはつは既に受けたあくびを解除しない。また、ボディプレスやイカサマなどの攻撃技は止められない。</li>
+<li>最速ギャラドスはS146、りゅうのまい1回でS219。最速メガルカリオZのS223には届かない。</li>
+</ul>
+</section>
+<section class="record-section"><h2>選出の出発点</h2>
+<p>固定の正解ではなく、相手の6体と勝ち筋に合わせて調整する。記載順は必ずしも先発順を意味しない。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="構築の表"><table>
+<tr><th>相手・狙い</th><th>選出例</th><th>動き</th></tr>
+<tr><td>ギャラドスが通りそう</td><td>ガブリアス＋ギャラドス＋ロトム</td><td>削りと鋼・草の処理からりゅうまい</td></tr>
+<tr><td>耐久・変化技が多い</td><td>サーフゴー＋ギャラドス＋ロトム</td><td>わるだくみ・ちょうはつ・トリックで崩す</td></tr>
+<tr><td>攻撃的で積む余裕が少ない</td><td>ロトム＋アシレーヌ＋マスカーニャ</td><td>対面ごとに削り、高速技・先制技で詰める</td></tr>
+</table></div>
+</section>
+<section class="record-section"><h2>実戦での確認項目</h2>
+<p>まず20〜30戦ほど固定して試すことを提案済み。これは見直しのための目安で、勝率を統計的に確定する試合数ではない。</p>
+<ul>
+<li>相手の主要ポケモンと自分の選出3体。</li>
+<li>勝敗と、勝負が決まったターンの行動。</li>
+<li>積まれて止まらなかったか。</li>
+<li>ロトムが先に消耗したか、スカーフを手放すのが早かったか。</li>
+<li>ギャラドスの攻撃範囲が足りなかったか。</li>
+<li>かわらわりの壁破壊が役立ったか、格闘打点として火力不足だったか。</li>
+<li>技を変更すべき問題か、選出やHPの温存で改善できる問題か。</li>
+</ul>
+<p>2026年9月13日のユーザー報告：サーフゴーはそもそも選出しないことが多い。マスカーニャ・アシレーヌ・ギャラドスの3体を選出することが多く、ガブリアスとヒートロトムもたまに選出する。</p>
+<p>追加のユーザー報告：アーマーガアが少しきつい。相手の技構成・試合数・勝敗は未確認。現時点では構成変更なし。</p>
+<p>次の検討案：アーマーガア入りにサーフゴーまたはヒートロトムを選出して対応する。ボディプレス主体のアーマーガアに対するサーフゴーの役割を実戦で確認してから、6枠目の変更を判断する。選出案は未検証。</p>
+</section>
+<section class="record-section"><h2>相談時の参照資料</h2>
+<p>環境情報は2026年9月13日の相談時点。以下の攻略情報は第三者資料で、更新により内容が変わり得る。構築査定と選出案はそれらを参考にしたアシスタントの判断。</p>
+<ul>
+<li><a href="https://gamewith.jp/pokemon-champions/546413" target="_blank" rel="noopener noreferrer">環境ランキング</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/564100" target="_blank" rel="noopener noreferrer">サーフゴーの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554989" target="_blank" rel="noopener noreferrer">メガギャラドスの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554982" target="_blank" rel="noopener noreferrer">ヒートロトムの育成論</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554969" target="_blank" rel="noopener noreferrer">マスカーニャの育成論・習得技</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/554250" target="_blank" rel="noopener noreferrer">かわらわりの仕様</a></li>
+<li><a href="https://appmedia.jp/pokemonchampions/79878392" target="_blank" rel="noopener noreferrer">ブリジュラスの重量とけたぐり威力</a></li>
+<li><a href="https://gamewith.jp/pokemon-champions/575012" target="_blank" rel="noopener noreferrer">メガボーマンダの能力と育成論</a></li>
+<li><a href="https://jara-blog.com/stealth-rock-sv" target="_blank" rel="noopener noreferrer">ステルスロックの仕様</a></li>
+</ul>
+</section>
+</article></main>
+<footer><div>個人の構築・戦略ノート / 非公式<a href="https://github.com/otake-shol/pokemon-strategy">公開ページのリポジトリ</a></div></footer>
+<script>
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+function select(mode, focus = false) {
+  if (!['doubles', 'singles'].includes(mode)) mode = 'doubles';
+  tabs.forEach(tab => {
+    const active = tab.id === `tab-${mode}`;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+    document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+    if (active && focus) tab.focus();
+  });
+}
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => { location.hash = tab.getAttribute('aria-controls'); });
+  tab.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const target = event.key === 'Home' ? 'doubles' : event.key === 'End' ? 'singles' : tab.id === 'tab-doubles' ? 'singles' : 'doubles';
+    select(target, true);
+    history.replaceState(null, '', `#${target}`);
+  });
+});
+document.querySelectorAll('[data-switch]').forEach(link => link.addEventListener('click', () => select(link.dataset.switch)));
+window.addEventListener('hashchange', () => select(location.hash.slice(1)));
+select(location.hash.slice(1));
+</script>
+</body>
+</html>
